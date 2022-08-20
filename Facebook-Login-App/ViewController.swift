@@ -7,7 +7,10 @@ class ViewController: UIViewController, LoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureViewDidLoad()
+    }
+    
+    func configureViewDidLoad() {
         let loginButton = FBLoginButton()
         view.addSubview(loginButton)
         loginButton.frame = CGRect(x: 16, y: 100, width: view.frame.width - 32, height: 50)
@@ -23,7 +26,6 @@ class ViewController: UIViewController, LoginButtonDelegate {
         customButton.frame = CGRect(x: 16, y: 200, width: view.frame.width - 32, height: 50)
         
         customButton.addTarget(self, action: #selector(handleCustomButton), for: .touchUpInside)
-        
     }
     
     @objc func handleCustomButton() {
@@ -43,12 +45,8 @@ class ViewController: UIViewController, LoginButtonDelegate {
             print(error!.localizedDescription)
             return
         }
-        
-       
-        
+
         showEmailAdres(token: result?.token?.tokenString)
-      
-        
     }
     
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
@@ -68,7 +66,7 @@ class ViewController: UIViewController, LoginButtonDelegate {
                 return
             }
             
-            print(result)
+            print(result!)
         }
     }
 }
