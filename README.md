@@ -1,6 +1,6 @@
-# Facebook-SignIn
+# Facebook-Signin
 
-In app, when creating a account this will be an optional option. Swift Package Manager used for access to Facebook Spk.
+In app, when creating a account this will be an optional option. Swift Package Manager used for access to Facebook sdk.
 
 ## Preview
 
